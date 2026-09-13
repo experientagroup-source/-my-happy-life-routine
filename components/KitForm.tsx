@@ -1,3 +1,5 @@
+"use client";
+
 type KitFormProps = {
   buttonLabel: string;
   placeholder?: string;
