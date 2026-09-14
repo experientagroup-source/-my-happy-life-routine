@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-mhr-ivory">
-      <div className="grid md:grid-cols-2 items-center min-h-[86vh] md:min-h-[90vh]">
-        <div className="order-2 md:order-1 px-5 sm:px-8 md:pl-8 md:pr-10 lg:pl-16 lg:pr-14 py-16 md:py-0 mhr-fade-up">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center min-h-[86vh] md:min-h-[90vh]">
+        <div className="order-2 md:order-1 min-w-0 px-5 sm:px-8 md:pl-8 md:pr-10 lg:pl-16 lg:pr-14 py-16 md:py-0 mhr-fade-up">
           <div className="max-w-md mx-auto md:mx-0">
             <p className="text-xs uppercase tracking-[0.3em] text-mhr-gold mb-6">
               My Happy Life Routine

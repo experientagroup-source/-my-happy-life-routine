@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutTeaserSection() {
   return (
     <section className="bg-mhr-ivory">
-      <div className="grid md:grid-cols-2 items-stretch md:min-h-[720px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-stretch md:min-h-[720px]">
         <div className="relative aspect-[4/5] md:aspect-auto h-[64vh] md:h-auto">
           <Image
             src="/images/natascha-cafe.jpg"
@@ -15,7 +15,7 @@ export default function AboutTeaserSection() {
           />
         </div>
 
-        <div className="flex flex-col justify-center px-5 sm:px-8 md:pl-10 md:pr-8 lg:pl-16 lg:pr-20 py-16 md:py-0">
+        <div className="min-w-0 flex flex-col justify-center px-5 sm:px-8 md:pl-10 md:pr-8 lg:pl-16 lg:pr-20 py-16 md:py-0">
           <p className="text-xs uppercase tracking-[0.3em] text-mhr-gold mb-6">
             About Natascha
           </p>
