@@ -4,6 +4,7 @@ type KitFormProps = {
   buttonLabel: string;
   placeholder?: string;
   showLastName?: boolean;
+  variant?: "light" | "dark";
 };
 
 /**
@@ -22,30 +23,47 @@ export default function KitForm({
   buttonLabel,
   placeholder = "Your first name",
   showLastName = false,
+  variant = "light",
 }: KitFormProps) {
+  // Fields get their own full-width row (or a half row for the name pair)
+  // instead of sharing one flex-wrap row — with 4 items (name/name/email/
+  // button) squeezed into one row, each field collapsed to a sliver too
+  // narrow to read or click into.
   const fieldClass =
-    "flex-1 min-w-0 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold";
+    variant === "dark"
+      ? "w-full min-w-0 bg-transparent border border-mhr-cream/40 text-mhr-cream px-4 py-3 text-sm placeholder:text-mhr-cream/55 focus:outline-none focus:border-mhr-gold-soft"
+      : "w-full min-w-0 bg-transparent border border-mhr-ink/30 text-mhr-ink px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold";
 
   return (
     <form
-      className="flex flex-col sm:flex-row sm:flex-wrap gap-3 w-full max-w-md min-w-0"
+      className="flex flex-col gap-3 w-full max-w-md min-w-0"
       // action={`https://app.kit.com/forms/REPLACE_FORM_ID/subscriptions`}
       // method="post"
       onSubmit={(e) => e.preventDefault()}
     >
       <input type="text" name="fields[first_name]" className="mhr-honeypot" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-      <input
-        type="text"
-        name="first_name"
-        placeholder={placeholder}
-        required
-        className={fieldClass}
-      />
-      {showLastName && (
+      {showLastName ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input
+            type="text"
+            name="first_name"
+            placeholder={placeholder}
+            required
+            className={fieldClass}
+          />
+          <input
+            type="text"
+            name="fields[last_name]"
+            placeholder="Your last name"
+            required
+            className={fieldClass}
+          />
+        </div>
+      ) : (
         <input
           type="text"
-          name="fields[last_name]"
-          placeholder="Your last name"
+          name="first_name"
+          placeholder={placeholder}
           required
           className={fieldClass}
         />
@@ -59,7 +77,7 @@ export default function KitForm({
       />
       <button
         type="submit"
-        className="font-display text-xs uppercase tracking-[0.14em] px-6 py-3 bg-mhr-charcoal text-mhr-cream hover:bg-mhr-ink transition-colors whitespace-nowrap"
+        className="font-display text-xs uppercase tracking-[0.14em] px-6 py-3 bg-mhr-charcoal text-mhr-cream hover:bg-mhr-ink transition-colors whitespace-nowrap self-start"
       >
         {buttonLabel}
       </button>

@@ -11,7 +11,7 @@ export default function AboutTeaserSection() {
             alt="Natascha Wright"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover object-top"
+            className="object-cover object-bottom"
           />
         </div>
 
