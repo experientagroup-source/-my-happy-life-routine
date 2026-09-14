@@ -4,13 +4,13 @@ export default function ClosingNoteSection() {
   return (
     <section className="bg-mhr-ivory">
       <div className="grid md:grid-cols-2">
-        <div className="relative aspect-[4/5] md:aspect-auto">
+        <div className="relative aspect-[9/16]">
           <Image
-            src="/images/natascha-natural-portrait.jpg"
+            src="/images/natascha-cafe.jpg"
             alt="Natascha Wright"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
         </div>
         <div className="flex flex-col justify-center px-5 sm:px-8 md:px-16 py-16 md:py-0">

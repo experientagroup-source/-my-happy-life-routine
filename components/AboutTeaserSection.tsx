@@ -7,11 +7,11 @@ export default function AboutTeaserSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 items-stretch md:min-h-[720px]">
         <div className="relative w-full h-[64vh] md:h-auto">
           <Image
-            src="/images/natascha-cafe.jpg"
+            src="/images/natascha-artist-portrait.jpg"
             alt="Natascha Wright"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover object-[50%_12%]"
+            className="object-cover object-top"
           />
         </div>
 

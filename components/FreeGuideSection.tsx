@@ -54,7 +54,7 @@ export default function FreeGuideSection() {
             rituals behind them. Enter your name and email and I&rsquo;ll
             send it straight to your inbox.
           </p>
-          <KitForm buttonLabel="Send Me the Free Guide" />
+          <KitForm buttonLabel="Send Me the Free Guide" showLastName />
           <p className="text-xs text-mhr-ink-soft/70 mt-4 max-w-md">
             No spam — just this guide, and the option to hear from me again
             through the Happy Life Letter.

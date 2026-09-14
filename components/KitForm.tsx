@@ -3,6 +3,7 @@
 type KitFormProps = {
   buttonLabel: string;
   placeholder?: string;
+  showLastName?: boolean;
 };
 
 /**
@@ -17,7 +18,14 @@ type KitFormProps = {
  * Landing Pages & Forms → that form → Embed), or drop in its numeric form
  * ID and uncomment the action URL.
  */
-export default function KitForm({ buttonLabel, placeholder = "Your first name" }: KitFormProps) {
+export default function KitForm({
+  buttonLabel,
+  placeholder = "Your first name",
+  showLastName = false,
+}: KitFormProps) {
+  const fieldClass =
+    "flex-1 min-w-0 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold";
+
   return (
     <form
       className="flex flex-col sm:flex-row sm:flex-wrap gap-3 w-full max-w-md min-w-0"
@@ -31,14 +39,23 @@ export default function KitForm({ buttonLabel, placeholder = "Your first name" }
         name="first_name"
         placeholder={placeholder}
         required
-        className="flex-1 min-w-0 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold"
+        className={fieldClass}
       />
+      {showLastName && (
+        <input
+          type="text"
+          name="fields[last_name]"
+          placeholder="Your last name"
+          required
+          className={fieldClass}
+        />
+      )}
       <input
         type="email"
         name="email_address"
         placeholder="Your email"
         required
-        className="flex-1 min-w-0 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold"
+        className={fieldClass}
       />
       <button
         type="submit"

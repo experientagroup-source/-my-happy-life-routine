@@ -19,10 +19,12 @@ export default function HabitsSection() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
-          {previewHabits.map((habit) => (
+          {previewHabits.map((habit, index) => (
             <div key={habit.number} className="flex gap-6">
+              {/* Sequential display numbering (01/02/03) for the homepage
+                  cards only — habit.number keeps its real PDF position. */}
               <span className="mhr-numeral text-5xl sm:text-6xl leading-none shrink-0">
-                {habit.number}
+                {String(index + 1).padStart(2, "0")}
               </span>
               <div>
                 <p className="text-[11px] uppercase tracking-[0.2em] text-mhr-gold mb-2">
