@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="order-1 md:order-2 relative aspect-[4/5] md:aspect-auto h-[58vh] md:h-[90vh] mhr-fade-up">
+        <div className="order-1 md:order-2 relative w-full h-[58vh] md:h-[90vh] mhr-fade-up">
           <Image
             src="/images/natascha-natural-portrait.jpg"
             alt="Natascha Wright"

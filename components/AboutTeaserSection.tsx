@@ -5,7 +5,7 @@ export default function AboutTeaserSection() {
   return (
     <section className="bg-mhr-ivory">
       <div className="grid grid-cols-1 md:grid-cols-2 items-stretch md:min-h-[720px]">
-        <div className="relative aspect-[4/5] md:aspect-auto h-[64vh] md:h-auto">
+        <div className="relative w-full h-[64vh] md:h-auto">
           <Image
             src="/images/natascha-cafe.jpg"
             alt="Natascha Wright"
