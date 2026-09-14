@@ -20,7 +20,7 @@ type KitFormProps = {
 export default function KitForm({ buttonLabel, placeholder = "Your first name" }: KitFormProps) {
   return (
     <form
-      className="flex flex-col sm:flex-row gap-3 w-full max-w-md"
+      className="flex flex-col sm:flex-row sm:flex-wrap gap-3 w-full max-w-md min-w-0"
       // action={`https://app.kit.com/forms/REPLACE_FORM_ID/subscriptions`}
       // method="post"
       onSubmit={(e) => e.preventDefault()}
@@ -31,14 +31,14 @@ export default function KitForm({ buttonLabel, placeholder = "Your first name" }
         name="first_name"
         placeholder={placeholder}
         required
-        className="flex-1 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold"
+        className="flex-1 min-w-0 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold"
       />
       <input
         type="email"
         name="email_address"
         placeholder="Your email"
         required
-        className="flex-1 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold"
+        className="flex-1 min-w-0 bg-transparent border border-mhr-ink/30 px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold"
       />
       <button
         type="submit"

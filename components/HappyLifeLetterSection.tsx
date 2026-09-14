@@ -5,7 +5,7 @@ export default function HappyLifeLetterSection() {
   return (
     <section id="letter" className="bg-mhr-charcoal text-mhr-cream scroll-mt-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-24 md:py-32 grid md:grid-cols-2 gap-14 md:gap-20 items-center">
-        <div>
+        <div className="min-w-0">
           <p className="text-xs uppercase tracking-[0.3em] text-mhr-gold-soft mb-6">
             The Happy Life Letter
           </p>

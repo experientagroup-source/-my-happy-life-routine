@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import IntroSection from "@/components/IntroSection";
+import PhilosophySection from "@/components/PhilosophySection";
 import HabitsSection from "@/components/HabitsSection";
 import FreeGuideSection from "@/components/FreeGuideSection";
 import HappyLifeLetterSection from "@/components/HappyLifeLetterSection";
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <IntroSection />
+      <PhilosophySection />
       <HabitsSection />
       <FreeGuideSection />
       <HappyLifeLetterSection />

@@ -19,9 +19,11 @@ export default function MusicBridgeSection() {
         </p>
         <a
           href="https://natascha-wright.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-display text-xs uppercase tracking-[0.16em] text-mhr-gold hover:text-mhr-ink transition-colors border-b border-mhr-gold pb-1"
         >
-          Discover Natascha&rsquo;s Music &amp; Artist World →
+          Visit Natascha&rsquo;s Official Artist Website ↗
         </a>
       </div>
     </section>

@@ -68,14 +68,6 @@ export default function SiteFooter() {
                   Legal Notice
                 </Link>
               </li>
-              <li>
-                <a
-                  href={site.experientaWebsite}
-                  className="hover:text-mhr-gold-soft transition-colors"
-                >
-                  The Experienta Group
-                </a>
-              </li>
             </ul>
           </div>
         </div>
