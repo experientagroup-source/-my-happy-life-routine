@@ -3,27 +3,31 @@
 type KitFormProps = {
   buttonLabel: string;
   placeholder?: string;
-  showLastName?: boolean;
+  emailPlaceholder?: string;
   variant?: "light" | "dark";
+  /** Kit form id from the official embed, e.g. "9913602". Omit to leave
+   * the form unwired (renders the design only, submits nowhere). */
+  kitFormId?: string;
+  /** Kit's data-uid from the official embed, e.g. "ce0b024d2e". */
+  kitFormUid?: string;
 };
 
 /**
- * Integration point for the Kit inline form "My Happy Life Routine – Free
- * Guide" (already created in Kit, per the project brief). No embed code or
- * form ID was found in the project materials at build time, so this
- * renders the correct visual design without a real Kit account/form ID
- * wired in — it does not submit anywhere yet.
- *
- * To finish: replace the <form> below with Kit's own inline-form embed
- * snippet for "My Happy Life Routine – Free Guide" (Kit dashboard → Grow →
- * Landing Pages & Forms → that form → Embed), or drop in its numeric form
- * ID and uncomment the action URL.
+ * When kitFormId is supplied, this posts directly to Kit's official
+ * subscribe endpoint (https://app.kit.com/forms/{id}/subscriptions) using
+ * the exact action URL, data-sv-form/data-uid, and email_address field
+ * name from Kit's own embed snippet. Kit's ck.5.js script (loaded once in
+ * app/layout.tsx) progressively enhances any matching form into an inline
+ * AJAX submit with success/error messaging; without it (or if kitFormId is
+ * omitted), the form still submits as a plain HTML POST.
  */
 export default function KitForm({
   buttonLabel,
   placeholder = "Your first name",
-  showLastName = false,
+  emailPlaceholder = "Your email",
   variant = "light",
+  kitFormId,
+  kitFormUid,
 }: KitFormProps) {
   // Fields get their own full-width row (or a half row for the name pair)
   // instead of sharing one flex-wrap row — with 4 items (name/name/email/
@@ -34,44 +38,30 @@ export default function KitForm({
       ? "w-full min-w-0 bg-transparent border border-mhr-cream/40 text-mhr-cream px-4 py-3 text-sm placeholder:text-mhr-cream/55 focus:outline-none focus:border-mhr-gold-soft"
       : "w-full min-w-0 bg-transparent border border-mhr-ink/30 text-mhr-ink px-4 py-3 text-sm placeholder:text-mhr-ink-soft/60 focus:outline-none focus:border-mhr-gold";
 
+  const connected = Boolean(kitFormId);
+
   return (
     <form
-      className="flex flex-col gap-3 w-full max-w-md min-w-0"
-      // action={`https://app.kit.com/forms/REPLACE_FORM_ID/subscriptions`}
-      // method="post"
-      onSubmit={(e) => e.preventDefault()}
+      className="seva-form formkit-form flex flex-col gap-3 w-full max-w-md min-w-0"
+      action={connected ? `https://app.kit.com/forms/${kitFormId}/subscriptions` : undefined}
+      method={connected ? "post" : undefined}
+      data-sv-form={connected ? kitFormId : undefined}
+      data-uid={connected ? kitFormUid : undefined}
+      onSubmit={connected ? undefined : (e) => e.preventDefault()}
     >
+      <ul className="formkit-alert formkit-alert-error text-xs text-red-600 list-none p-0 m-0" data-element="errors" data-group="alert" />
       <input type="text" name="fields[first_name]" className="mhr-honeypot" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-      {showLastName ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <input
-            type="text"
-            name="first_name"
-            placeholder={placeholder}
-            required
-            className={fieldClass}
-          />
-          <input
-            type="text"
-            name="fields[last_name]"
-            placeholder="Your last name"
-            required
-            className={fieldClass}
-          />
-        </div>
-      ) : (
-        <input
-          type="text"
-          name="first_name"
-          placeholder={placeholder}
-          required
-          className={fieldClass}
-        />
-      )}
+      <input
+        type="text"
+        name="first_name"
+        placeholder={placeholder}
+        required
+        className={fieldClass}
+      />
       <input
         type="email"
         name="email_address"
-        placeholder="Your email"
+        placeholder={emailPlaceholder}
         required
         className={fieldClass}
       />
