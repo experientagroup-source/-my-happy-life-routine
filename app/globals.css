@@ -94,10 +94,3 @@ body {
   height: 1px;
   overflow: hidden;
 }
-
-/* Kit's own error-alert element (populated by their form-enhancement
-   script on a failed submit) collapses to nothing while empty, matching
-   Kit's own default embed behavior. */
-.formkit-alert:empty {
-  display: none;
-}

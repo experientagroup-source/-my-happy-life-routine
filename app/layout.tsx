@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "@fontsource/fraunces/400.css";
 import "@fontsource/fraunces/400-italic.css";
 import "@fontsource/fraunces/500.css";
@@ -28,10 +27,6 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
-        {/* Kit's own form-enhancement script — progressively upgrades any
-            [data-sv-form] form on the page into an inline-success/inline-
-            error AJAX submit, per Kit's official embed snippet. */}
-        <Script src="https://f.convertkit.com/ckjs/ck.5.js" strategy="afterInteractive" />
       </body>
     </html>
   );
