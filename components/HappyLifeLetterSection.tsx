@@ -17,7 +17,7 @@ export default function HappyLifeLetterSection() {
             a book, a moment from the road. One little thing to try, and a
             reminder that happiness doesn&rsquo;t have to wait for someday.
           </p>
-          <KitForm buttonLabel="Join the Happy Life Letter" variant="dark" />
+          <KitForm buttonLabel="Join the Happy Life Letter" variant="dark" kitFormId="9913602" />
         </div>
 
         <div className="relative aspect-square w-full max-w-md mx-auto">

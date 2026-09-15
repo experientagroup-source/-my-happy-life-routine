@@ -90,7 +90,16 @@ export default function KitForm({
   }
 
   if (status === "success") {
-    return <p className={`${textClass} text-sm`}>Thank you for signing up! Please check your email to confirm your subscription.</p>;
+    return (
+      <div className={`${textClass} text-sm space-y-2`}>
+        <p>Your Happy Life Routine is on its way ❤️</p>
+        <p>Check your inbox for an email from Natascha Wright.</p>
+        <p>
+          Can&rsquo;t see it? Please check your Spam/Junk or Promotions
+          folder and mark the email as Not Spam.
+        </p>
+      </div>
+    );
   }
 
   return (
