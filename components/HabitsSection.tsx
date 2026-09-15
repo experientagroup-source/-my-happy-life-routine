@@ -49,7 +49,7 @@ export default function HabitsSection() {
             href="#guide"
             className="font-display text-xs uppercase tracking-[0.16em] px-8 py-4 bg-mhr-charcoal text-mhr-cream hover:bg-mhr-ink transition-colors inline-block"
           >
-            Get All 10 Habits — Free
+            Get All 10 Habits for Free
           </a>
         </div>
       </div>

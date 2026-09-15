@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Legal Notice — My Happy Life Routine",
+  title: "Legal Notice for My Happy Life Routine",
 };
 
 export default function LegalPage() {
@@ -23,7 +23,7 @@ export default function LegalPage() {
 
           <p>
             Registered address, company registration number and VAT ID: to
-            be added here once confirmed — see this project&rsquo;s
+            be added here once confirmed. See this project&rsquo;s
             outstanding items. This site will not display placeholder or
             invented registration details in the meantime.
           </p>

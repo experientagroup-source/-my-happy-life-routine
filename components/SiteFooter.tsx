@@ -17,7 +17,7 @@ export default function SiteFooter() {
             />
             <p className="text-sm text-mhr-cream/70 leading-relaxed max-w-xs">
               My Happy Life Routine is a personal lifestyle world presented by
-              Natascha Wright — small habits, real life, no perfection required.
+              Natascha Wright. Small habits, real life, no perfection required.
             </p>
           </div>
 
@@ -31,7 +31,7 @@ export default function SiteFooter() {
                   href={site.nataschaWebsite}
                   className="hover:text-mhr-gold-soft transition-colors"
                 >
-                  Natascha Wright — Official Website
+                  Natascha Wright&rsquo;s Official Website
                 </a>
               </li>
               <li>

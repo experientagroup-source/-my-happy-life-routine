@@ -16,7 +16,7 @@ export default function IntroSection() {
               As a professional artist, I&rsquo;ve spent much of my life
               travelling, performing and living out of suitcases. Along the
               way, I&rsquo;ve discovered simple little routines that help me
-              feel grounded, happy and more like myself — wherever I happen
+              feel grounded, happy and more like myself, wherever I happen
               to be.
             </p>
             <p>
@@ -27,7 +27,7 @@ export default function IntroSection() {
             </p>
             <p className="font-display italic text-lg text-mhr-ink">
               My Happy Life Routine isn&rsquo;t about perfection. It&rsquo;s
-              about creating little habits that make life feel better — and
+              about creating little habits that make life feel better, and
               that you can actually maintain.
             </p>
           </div>

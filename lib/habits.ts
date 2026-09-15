@@ -26,9 +26,9 @@ export const habits: Habit[] = [
   {
     number: "03",
     category: "Nourishment",
-    title: "Eat Well — and Still Enjoy Your Food",
+    title: "Eat Well and Still Enjoy Your Food",
     glimpse:
-      "Make good choices most of the time — and leave a little room for the things you simply enjoy.",
+      "Make good choices most of the time, and leave a little room for the things you simply enjoy.",
   },
   {
     number: "04",
@@ -45,7 +45,7 @@ export const habits: Habit[] = [
   {
     number: "06",
     category: "Self-Care & Home",
-    title: "Get Ready — Even When Nobody Is Watching",
+    title: "Get Ready, Even When Nobody Is Watching",
     glimpse:
       "I don't only get ready because someone else might see me. I get ready because I see me.",
   },

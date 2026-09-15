@@ -24,7 +24,7 @@ export default function AboutTeaserSection() {
           </h2>
           <p className="text-mhr-ink-soft leading-relaxed mb-4 max-w-md">
             Natascha Wright has spent decades as an international performing
-            artist — travelling, performing, moving between countries,
+            artist, travelling, performing, moving between countries,
             managing businesses and family life on an irregular schedule.
           </p>
           <p className="text-mhr-ink-soft leading-relaxed mb-8 max-w-md">

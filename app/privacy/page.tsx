@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — My Happy Life Routine",
+  title: "Privacy Policy for My Happy Life Routine",
 };
 
 export default function PrivacyPage() {
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             My Happy Life Routine is presented by Natascha Wright and
             operated within {site.companyName} (&ldquo;we&rdquo;,
             &ldquo;us&rdquo;). This policy explains what information this
-            website actually collects and how it&rsquo;s used — nothing
+            website actually collects and how it&rsquo;s used, nothing
             more.
           </p>
 
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               Your name and email are used to send you the free guide you
-              requested, and — only if you separately opt in — the Happy
+              requested, and, only if you separately opt in, the Happy
               Life Letter and related updates from Natascha. We use Kit
               (kit.com) as our email service provider to store this
               information and send these emails. Every email includes an
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               At the time of writing, this site does not run an automated
-              welcome-email sequence — that Kit feature has not yet been
+              welcome-email sequence. That Kit feature has not yet been
               activated on this account. If and when it is, this policy will
               be updated to describe it.
             </p>
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
               Contact
             </h2>
             <p>
-              {site.companyName} — {site.contactEmail}. Further company
+              {site.companyName}, {site.contactEmail}. Further company
               registration details are available on request and will be
               added here once finalised for this project.
             </p>

@@ -14,7 +14,7 @@ export default function HappyLifeLetterSection() {
           </h2>
           <p className="text-mhr-cream/70 leading-relaxed mb-10 max-w-md">
             A thought. A song. Something making me happy this week. A place,
-            a book, a moment from the road. One little thing to try — and a
+            a book, a moment from the road. One little thing to try, and a
             reminder that happiness doesn&rsquo;t have to wait for someday.
           </p>
           <KitForm buttonLabel="Join the Happy Life Letter" variant="dark" />

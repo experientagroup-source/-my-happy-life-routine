@@ -12,9 +12,9 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "My Happy Life Routine — Natascha Wright",
+  title: "My Happy Life Routine by Natascha Wright",
   description:
-    "10 small habits Natascha Wright lives by — little things that help her feel happier, healthier and a little more balanced.",
+    "10 small habits Natascha Wright lives by. Little things that help her feel happier, healthier and a little more balanced.",
 };
 
 export default function RootLayout({

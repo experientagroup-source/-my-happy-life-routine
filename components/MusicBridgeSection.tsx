@@ -6,7 +6,7 @@ export default function MusicBridgeSection() {
           Energy &amp; Sound
         </p>
         <h2 className="font-display text-2xl sm:text-3xl leading-snug text-mhr-ink mb-6 max-w-2xl mx-auto">
-          Music has been part of my life for decades — it isn&rsquo;t a
+          Music has been part of my life for decades. It isn&rsquo;t a
           wellness technique I discovered, it&rsquo;s simply always been
           there.
         </h2>

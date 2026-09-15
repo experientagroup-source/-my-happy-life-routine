@@ -45,7 +45,7 @@ export default function Hero() {
             fill
             priority
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover object-[50%_15%] md:object-[50%_20%]"
+            className="object-cover object-[50%_19%] md:object-[50%_20%]"
           />
         </div>
       </div>
